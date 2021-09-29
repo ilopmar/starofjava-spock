@@ -14,6 +14,7 @@ class E6_Mocking extends Specification {
 
         then:
         1 * mockedNotificationService.sendNotification(_, 'User created')
+        // 0 * _
     }
 
     void 'should check constraints on interactions'() {

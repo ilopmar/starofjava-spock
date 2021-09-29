@@ -24,6 +24,15 @@ class E2_Groovy extends Specification {
         then:
         users.size() == 4
         users.name == ['Sheldon', 'Leonard', 'Raj', 'Howard']
+
+//        println users.name
+//        println users*.name
+//        println users.collect { it.name }
+//        println users.collect { it.getName() }
+//        println users.collect { User u -> u.getName() }
+//        println users.stream().map { User u -> u.getName() }.collect(Collectors.toList())
+//        println users.stream().map { User u -> u.getName() }.toList()
+
         users.name.sort() == ['Howard', 'Leonard', 'Raj', 'Sheldon']
         users.lastName.collect { it.size() } == [6, 10, 12, 8]
         users.name.min { it.length() } == 'Raj'

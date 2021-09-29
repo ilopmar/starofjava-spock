@@ -12,6 +12,6 @@ class E9_Old extends Specification {
         numbers << 21
 
         then:
-        false
+        numbers.size() == old(numbers.size()) + 1
     }
 }

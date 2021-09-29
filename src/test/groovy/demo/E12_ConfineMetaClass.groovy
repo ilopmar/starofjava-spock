@@ -5,6 +5,7 @@ import spock.util.mop.ConfineMetaClassChanges
 
 class E12_ConfineMetaClass extends Specification {
 
+    @ConfineMetaClassChanges(String)
     void 'should have sayHi method on String'() {
         given:
         String.metaClass.sayHi = { -> "Hi ${delegate}" }

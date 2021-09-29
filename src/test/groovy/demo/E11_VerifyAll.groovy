@@ -9,7 +9,9 @@ class E11_VerifyAll extends Specification {
         var user = new User(name: 'Iván', lastName: 'López')
 
         expect:
-        user.name != 'Iván'
-        user.lastName != 'López'
+        verifyAll {
+            user.name != 'Iván'
+            user.lastName != 'López'
+        }
     }
 }
